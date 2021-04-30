@@ -1,21 +1,22 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container} from 'theme-ui';
+import { jsx, Container, Box, Flex } from 'theme-ui';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { Heading1 } from '../components/typography';
 
-const Home = () => {
+const Service = () => {
   return (
-    <Layout home>
+    <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Service | {siteTitle}</title>
       </Head>
       <Container>
-        <Heading1>Hello</Heading1>
+        <Heading1>Service</Heading1>
       </Container>
     </Layout>
   );
 };
 
-export default Home;
+export default Service;
