@@ -8,7 +8,7 @@ import Footer from './footer';
 
 export const siteTitle = `学ぶ喜びをすべての人へ – スタディプラス株式会社`;
 export const siteDescription = `タディプラス株式会社は、「学ぶ喜びをすべての人へ」というミッションを掲げ、新しい教育の仕組みをつくる会社です。大学受験生の3人に1人が利用する学習管理プラットフォーム「Studyplus」を運営しています。`;
-export const siteAuthor = `Studyplus Inc.`;
+export const siteAuthor = `スタディプラス株式会社`;
 
 const Layout = ({ children, home }) => {
   return (
