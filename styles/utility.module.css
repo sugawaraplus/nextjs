@@ -54,6 +54,20 @@
   text-decoration: none;
 }
 
+.tabs {
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.tabs.active,
+.tabs:hover {
+  color: #0075f2;
+  border-bottom: 2px solid #0075f2;
+  padding-bottom: 8px;
+}
+
 @media screen and (min-width: 768px) {
   .button1 {
     font-size: 18px;
@@ -73,6 +87,11 @@
   .button4 {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .tabs {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -95,5 +114,10 @@
   .button4 {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .tabs {
+    font-size: 21px;
+    line-height: 28px;
   }
 }

@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Link } from 'theme-ui';
-import Image from 'next/image';
+import { jsx, Container, Box } from "theme-ui";
+import Image from "next/image";
 
-const Footer = () => {
+const Footer = ({ sx }) => {
   return (
-    <footer sx={{ mt: [7, 10], mb: 3 }}>
+    <footer sx={{ bg: "background", pt: 10, pb: 4, sx }}>
       <Container>
-        Footer
+        <Box sx={{ fontSize: 4, lineHeight: "20px" }}>Footer</Box>
       </Container>
     </footer>
   );
