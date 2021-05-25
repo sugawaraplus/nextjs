@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
-import React from 'react';
-import Head from 'next/head';
-import Header from './header';
-import Footer from './footer';
+import { jsx } from "theme-ui";
+import React from "react";
+import Head from "next/head";
+import Header from "./header";
+import Footer from "./footer";
 
 export const siteTitle = `学ぶ喜びをすべての人へ – スタディプラス株式会社`;
 export const siteDescription = `タディプラス株式会社は、「学ぶ喜びをすべての人へ」というミッションを掲げ、新しい教育の仕組みをつくる会社です。大学受験生の3人に1人が利用する学習管理プラットフォーム「Studyplus」を運営しています。`;
@@ -33,17 +33,17 @@ const Layout = ({ children, home }) => {
       </Head>
       <div
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
         }}
       >
         {home ? <Header home /> : <Header />}
         <main
           sx={{
-            width: '100%',
-            flex: '1 1 auto',
-            mt: [7, 11],
+            width: "100%",
+            flex: "1 1 auto",
+            mt: [7, 12],
           }}
         >
           {children}

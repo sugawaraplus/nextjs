@@ -1,8 +1,15 @@
 .navLink {
-  font-size: 20px;
-  line-height: 1.125;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
   margin-right: 24px;
+}
+
+.navLink:hover {
+  color: #0075f2;
+  border-bottom: 2px solid #0075f2;
+  padding-bottom: 8px;
 }
 
 .navLink:last-of-type {

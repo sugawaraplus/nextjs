@@ -16,22 +16,24 @@ const Header = () => {
   return (
     <header>
       <Container>
-        <Flex sx={{ my: 5 }}>
+        <Flex sx={{ mt: 2 }}>
           <Link href="/">
             <a>
               <Image
-                src="/images/logo_studyplus.svg"
+                src="/images/logo_studyplus_inc.svg"
                 alt={siteTitle}
-                width={138}
-                height={35}
+                width={142}
+                height={36}
                 priority={true}
               />
             </a>
           </Link>
           <div sx={{ ml: "auto" }}>
-            <NavLink href="/service" title="Service" />
-            <NavLink href="/company" title="Company" />
-            <NavLink href="/recruit" title="Recruit" />
+            <NavLink href="/company" title="COMPANY" />
+            <NavLink href="/service" title="SERVICE" />
+            <NavLink href="/news" title="NEWS" />
+            <NavLink href="/ir" title="IR" />
+            <NavLink href="/recruit" title="RECRUIT" />
           </div>
         </Flex>
       </Container>
