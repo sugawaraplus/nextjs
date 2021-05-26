@@ -269,4 +269,39 @@ const Home = () => {
   );
 };
 
+const USER_PASS = "studyplus:studyplusCorporateStaging";
+
+const sendUnauthorized = (res) => {
+  res.writeHead(401, {
+    "www-authenticate": "Basic realm=policy7oilfield6admix9duct string",
+  });
+  res.end();
+};
+
+Home.getInitialProps = ({ req, res }) => {
+  if (!process.browser) {
+    const authorization = req.headers["authorization"];
+
+    if (typeof authorization === "undefined") {
+      sendUnauthorized(res);
+      return;
+    }
+
+    const matches = authorization.match(/[^\s]+$/);
+    if (matches === null) {
+      sendUnauthorized(res);
+      return;
+    }
+
+    const userPass = Buffer.from(matches[0], "base64").toString();
+
+    if (userPass !== USER_PASS) {
+      sendUnauthorized(res);
+      return;
+    }
+  }
+
+  return { message: "😷" };
+};
+
 export default Home;
