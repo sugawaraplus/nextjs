@@ -10,7 +10,6 @@ const NavTitle = ({ url, title, mt }) => (
       fontSize: [1, 3, 4],
       lineHeight: ["16px", "20px", "20px"],
       "& a": { textDecoration: "none", color: "black" },
-      "& a:hover": { color: "primary" },
       mt: mt,
     }}
   >
@@ -27,7 +26,6 @@ const NavList1 = ({ url, title }) => (
       fontSize: [0, 1, 3],
       lineHeight: ["16px", "20px", "20px"],
       "& a": { textDecoration: "none", color: "black" },
-      "& a:hover": { color: "primary" },
     }}
   >
     <Link href={url} passHref>
@@ -42,7 +40,6 @@ const NavList2 = ({ url, title, mr }) => (
       fontSize: 1,
       lineHeight: "16px",
       "& a": { textDecoration: "none", color: "black" },
-      "& a:hover": { color: "primary" },
       mr,
     }}
   >
@@ -60,7 +57,6 @@ const Copyright = ({ url, title }) => (
       fontSize: 1,
       lineHeight: "16px",
       "& a": { textDecoration: "none", color: "lower" },
-      "& a:hover": { color: "primary" },
     }}
   >
     <Link href={url} passHref>

@@ -27,7 +27,7 @@ const News = () => {
             textDecoration: "none",
             pb: 2,
           },
-          "& a:hover,& a.active": {
+          "& a.active": {
             color: "primary",
             borderBottomWidth: 2,
             borderBottomStyle: "solid",
@@ -86,6 +86,7 @@ const News = () => {
         url="/news"
         mt={6}
       />
+      <NewsNavigation />
     </>
   );
 };
@@ -110,13 +111,85 @@ const NewsTitle = ({ date, title, url, mt }) => (
           textDecoration: "none",
           color: "black",
         },
-        "& a:hover": {
-          color: "primary",
-        },
       }}
     >
       <Link href={url}>
         <a>{title}</a>
+      </Link>
+    </Box>
+  </Flex>
+);
+
+const NewsNavigationLink = ({ num, current }) => (
+  <>
+    {current ? (
+      <Flex
+        sx={{
+          fontSize: 6,
+          lineHeight: "28px",
+          color: "primary",
+          width: "48px",
+          height: "48px",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {num}
+      </Flex>
+    ) : (
+      <Flex
+        sx={{
+          fontSize: 6,
+          lineHeight: "28px",
+          width: "48px",
+          height: "48px",
+          justifyContent: "center",
+          alignItems: "center",
+          "& a": {
+            color: "black",
+            textDecoration: "none",
+          },
+        }}
+      >
+        <Link href="/">
+          <a>{num}</a>
+        </Link>
+      </Flex>
+    )}
+  </>
+);
+
+const NewsNavigation = () => (
+  <Flex sx={{ mt: 11, justifyContent: "center" }}>
+    <Box sx={{ mr: 7, "& img": { opacity: 0.18 } }}>
+      <Link href="/">
+        <a>
+          <Image
+            src="/images/icon_navigate_prev.svg"
+            alt="prev"
+            width={48}
+            height={48}
+          />
+        </a>
+      </Link>
+    </Box>
+    <Flex sx={{ justifyContent: "center" }}>
+      <NewsNavigationLink num="1" current />
+      <NewsNavigationLink num="2" />
+      <NewsNavigationLink num="3" />
+      <NewsNavigationLink num="4" />
+      <NewsNavigationLink num="5" />
+    </Flex>
+    <Box sx={{ ml: 7 }}>
+      <Link href="/">
+        <a>
+          <Image
+            src="/images/icon_navigate_next.svg"
+            alt="next"
+            width={48}
+            height={48}
+          />
+        </a>
       </Link>
     </Box>
   </Flex>
@@ -133,9 +206,6 @@ const CompanyInfo = ({ url, title }) => (
         textDecoration: "none",
         color: "black",
         fontSize: [4, 5, 6],
-      },
-      "& a:hover": {
-        color: "primary",
       },
     }}
   >
