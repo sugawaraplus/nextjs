@@ -38,13 +38,6 @@ const Header = () => {
                 color: "black",
                 mr: [3, 6],
               },
-              "& a:hover": {
-                color: "primary",
-                borderBottomWidth: 2,
-                borderBottomStyle: "solid",
-                borderBottomColor: "primary",
-                pb: 2,
-              },
               "& a:last-of-type": { mr: 0 },
             }}
           >
